@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="static/ptest.js"></script>
+    <link rel="stylesheet" href="static/style4.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav" id="nav">
+        <a class="" href="#home">Home</a>
+        <a href="#news">Quiz</a>
+        <a href="#contact">MadLibs</a>
+        <a href="#about">Wordle</a>
+        <a class="active" href="#about">Personality Test</a>
+      </div>
+    <div id="intro">
+        <h1>Welcome to Dive Deeper: Discover your Aquatic Alter Ego!</h1>
+        <h3>Click Below to Start</h3>
+        <button onclick="start()" id="start">Start</button>
+    </div>
+
+    <div class="hide" style="display: none;" id="questions"> 
+        <h2 id="question-words"></h2> 
+        <div class="options" id="options"> 
+            <input type="radio" class="radio-btn" name="question" id="option1"
+            value = "optionA">
+            <label for="option1" id="optionA"></label>
+            <input type="radio" class="radio-btn" name="question" id="option2" value="optionB">
+            <label for="option2" id="optionB"></label>
+            <input type="radio" class="radio-btn" name="question" id="option3" value="optionC">
+            <label for="option3" id="optionC"></label>
+            <input type="radio" class="radio-btn" name="question" id="option4" value="optionD">
+            <label for="option4" id="optionD"></label>
+        </div> 
+        <button type="submit", onclick="next()">Next Question 
+    </div>
+    <div id="finished" style="display: none;">
+        <h1 id="score"></h1>
+        <h2 id="explanation"></h2>
+        <h3>Click Below to Play Again</h3>
+        <button onclick="start()">Play Again</button>
+        
+    </div>
+</body>
+</html>
