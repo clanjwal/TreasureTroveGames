@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content=""width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="static/style2.css">
+    <title>Nautical Mad Libs</title>
+</head>
+<body>
+
+    <div class="topnav" id="nav">
+        <a  href="home">Home</a>
+        <a href="quiz">Quiz</a>
+        <a class="active" href="madlibs">MadLibs</a>
+        <a href="wavele">Wordle</a>
+        <a href="ptest">Personality Test</a>
+      </div>
+ 
+    <h1>Welcome to Nautical Mad Libs!! &#128741</h1>    
+   <h2>Answer the questions below to create your own wacky story!</h2>
+     
+    <ul>
+      <ol>Enter an adjective: <input type="text" id="adj1"></ol>
+      <ol>Enter a name: <input type="text" id="name"></ol>
+      <ol>Enter the name of a ship: <input type="text" id="shipName"></ol>
+      <ol>Enter a noun: <input type="text" id="noun1"></ol>
+      <ol>Enter a place: <input type="text" id="place1"></ol>
+      <ol>Enter an emotion: <input type="text" id="emotion"></ol>
+      <ol>Enter a color: <input type="text" id="color"></ol>
+      <ol>Enter a verb: <input type="text" id="verb1"></ol>
+      <ol>Enter a body of water: <input type="text" id="bodyOfWater"></ol>
+      <ol>Enter a verb: <input type="text" id="verb2"></ol>
+      <ol>Enter an adjective: <input type="text" id="adj2"></ol>
+      <ol>Enter a past-tense verb: <input type="text" id="verb3"></ol>
+      <ol>Enter an adjective: <input type="text" id="adj3"></ol>
+      <ol>Enter a noun: <input type="text" id="noun3"></ol>
+      <ol>Enter an adjective: <input type="text" id="adj4"></ol>
+      <ol>Enter a verb ending in -ing: <input type="text" id="verbing"></ol>
+      <ol>Enter an adjective: <input type="text" id="adj5"></ol>
+
+    </ul>
+
+    <button id="lib-button">Lib it!</button>
+    <p id="title">
+        <b>A Seafaring Adventure</b>
+        <br />
+        <span id="story"></span>
+    </p>
+
+    <script>
+        var libButton = document.getElementById('lib-button');
+        document.getElementById("title").style.display="none";
+        var libIt = function() {
+
+            document.getElementById("title").style.display="block";
+            var storyDiv = document.getElementById("story");
+            let adj1 = document.getElementById("adj1").value;
+            let name = document.getElementById("name").value;
+            let shipName = document.getElementById("shipName").value;
+            let noun1 = document.getElementById("noun1").value;
+            let place1 = document.getElementById("place1").value;
+            let emotion = document.getElementById("emotion").value;
+            let color = document.getElementById("color").value;
+            let verb1 = document.getElementById("verb1").value;
+            let bodyofWater = document.getElementById("bodyOfWater").value;
+            let verb2 = document.getElementById("verb2").value;
+            let adj2 = document.getElementById("adj2").value;
+            let verb3 = document.getElementById("verb3").value;
+            let noun3 = document.getElementById("noun3").value;
+            let adj3 = document.getElementById("adj3").value;
+            let verbing = document.getElementById("verbing").value;
+            let adj4 = document.getElementById("adj4").value;
+            let adj5 = document.getElementById("adj5").value;
+
+
+            storyDiv.innerHTML = "Once upon a " + adj1 + " morning, Captain " + name + 
+            " and their loyal crew set sail on their trusty ship, the '" + shipName + "'. Their mission was to find the legendary " +
+            noun1 + ", a treasure said to be hidden on a remote " + place1 + ". The crew was excited and " + emotion + 
+            " as they hoisted the " + color + " sails and headed out to " + verb1 + " across the " + bodyofWater + ".";
+
+
+            storyDiv.innerHTML += " As they " + verb2 + " across the " + bodyofWater + ", the crew encountered all sorts of " + adj2 + 
+            " challenges. They " + verb3 + " fiercely and navigated treacherous waters. Captain " + name + 
+            " relied on their " + noun3 + " to steer the ship safely through the " + adj3 + " storms.";
+
+            storyDiv.innerHTML += " After many days at sea, they finally arrived at the " + place1 + ". The crew followed the map, " +
+            verbing + " deep into the ground, searching for the hidden " + noun1 + ". At last, they found it buried beneath a " + 
+            adj4 + " palm tree. ";
+
+            storyDiv.innerHTML += "The crew celebrated with a feast and shared stories of their daring adventure. With their new treasure in their possession, they set sail once more, knowing that the open " 
+            + bodyofWater + " held many more " + adj5 + " adventures and " + noun1 + " waiting to be discovered.";
+
+            storyDiv.scrollIntoView({ behavior: "smooth" });
+        };
+
+        libButton.addEventListener('click', libIt); 
+        
+    </script>
+  
+ </body>
+</html>
