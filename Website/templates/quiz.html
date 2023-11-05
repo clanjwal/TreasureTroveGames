@@ -1,0 +1,51 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>    
+    <script src="static/quiz2.js"></script>
+    <link rel="stylesheet" href="static/style1.css">
+    
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav" id="nav">
+        <a class="" href="home">Home</a>
+        <a class="active"  href="quiz2.html">Quiz</a>
+        <a href="madlibs">MadLibs</a>
+        <a href="wavele">Wordle</a>
+        <a href="ptest">Personality Test</a>
+      </div>
+    <div id="intro">
+        <h1>Surf 'n Learn Trivia</h1>
+        <h3>Catching Waves of Sea Information!</h3>
+        <h3>Click Below to Start</h3>
+        <button onclick="start()" id="start">Start</button>
+    </div>
+    <div class="hide" style="display: none;" id="questions"> 
+        <h2 id="question-words"></h2> 
+        <div class="options" id="options"> 
+            <input type="radio" class="radio-btn" name="question" id="option1" value="optionA">
+            <label for="option1" id="optionA"></label>
+            <input type="radio" class="radio-btn" name="question" id="option2" value="optionB">
+            <label for="option2" id="optionB"></label>
+            <input type="radio" class="radio-btn" name="question" id="option3" value="optionC">
+            <label for="option3" id="optionC"></label>
+            <input type="radio" class="radio-btn" name="question" id="option4" value="optionD">
+            <label for="option4" id="optionD"></label>
+        </div>
+        <button type="submit", onclick="check()">Check Answer</button>
+    </div>
+    <div style="display: none;" id="solution">
+        <h3 id="result"></h3>
+        <h4 id="message"></h4>
+        <button type="submit", onclick="next()">Next Question</button>
+    </div>
+    <div id="finished" style="display: none;">
+        <h1 id="score"></h1>
+        <h3>Click Below to Play Again</h3>
+        <button onclick="start()">Play Again</button>
+    </div>
+</body>
+</html>
